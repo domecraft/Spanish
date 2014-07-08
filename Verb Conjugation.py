@@ -28,18 +28,25 @@ elif pronoun == "tu":
         conjugatedVerb = verbRoot + "es"
     else:
         conjugatedVerb = verbRoot + "as"
-elif pronoun == "usted":
+elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
     if (verbEnding == "er") or (verbEnding == "ir"):
         conjugatedVerb = verbRoot + "e"
     else:
         conjugatedVerb = verbRoot + "a"
-
-
-
-
+elif (pronoun == "ellas") or (pronoun == "ellos"):
+    if (verbEnding == "er") or (verbEnding == "ir"):
+        conjugatedVerb = verbRoot + "en"
+    else:
+        conjugatedVerb = verbRoot + "an"
+elif (pronoun == "nosotros") or (pronoun == "nosotras"):
+    if (verbEnding == "er") or (verbEnding == "ir"):
+        conjugatedVerb = verbRoot + "imos"
+    else:
+        conjugatedVerb = verbRoot + "amos"
+        
     
 print
-print "The verb conjugated is: " + conjugatedVerb
+print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb
 
     
 
