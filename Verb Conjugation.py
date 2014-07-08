@@ -1,3 +1,11 @@
+inputtCorrect = False
+while inputtCorrect == False:
+    tense = raw_input("Enter the tense of the verb (present or future):")
+    try:
+        int(tense)
+    except:
+        inputtCorrect = True
+    print
 inputpCorrect = False
 while inputpCorrect == False:
     print 
@@ -15,6 +23,7 @@ while inputwCorrect == False:
         int(word)
     except:
         inputwCorrect = True
+    
         
 verbRoot = verb[:len(verb) - 2:]
 verbEnding = verb[len(verb) - 2:]
@@ -41,10 +50,26 @@ elif (pronoun == "nosotros") or (pronoun == "nosotras"):
         conjugatedVerb = verbRoot + "imos"
     else:
         conjugatedVerb = verbRoot + "amos"
-        
+
+if tense == "future":
+    if pronoun == "yo":
+        conjugatedIr = "voy"
+    elif pronoun == "tu":
+        conjugatedIr = "vas"
+    elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
+        conjugatedIr = "va"
+    elif (pronoun == "ellos") or (pronoun == "ellas"):
+        conjugatedIr = "van"
+    elif (pronoun == "nosotros") or (pronoun == "nosotras"):
+        conjugatedIr = "vamos"
+
     
+
 print
-print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb
+if tense == "present":
+    print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb + "."
+else: 
+    print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedIr + " a " + verb +"."
 
     
 
