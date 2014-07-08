@@ -19,8 +19,6 @@ while inputwCorrect == False:
 verbRoot = verb[:len(verb) - 2:]
 verbEnding = verb[len(verb) - 2:]
 
-print verbEnding
-
 if pronoun == "yo":
     conjugatedVerb = verbRoot + "o"
 elif pronoun == "tu":
