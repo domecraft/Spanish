@@ -28,28 +28,29 @@ while inputwCorrect == False:
 verbRoot = verb[:len(verb) - 2:]
 verbEnding = verb[len(verb) - 2:]
 
-if pronoun == "yo":
-    conjugatedVerb = verbRoot + "o"
-elif pronoun == "tu":
-    if (verbEnding == "er") or (verbEnding == "ir"):
-        conjugatedVerb = verbRoot + "es"
-    else:
-        conjugatedVerb = verbRoot + "as"
-elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
-    if (verbEnding == "er") or (verbEnding == "ir"):
-        conjugatedVerb = verbRoot + "e"
-    else:
-        conjugatedVerb = verbRoot + "a"
-elif (pronoun == "ellas") or (pronoun == "ellos"):
-    if (verbEnding == "er") or (verbEnding == "ir"):
-        conjugatedVerb = verbRoot + "en"
-    else:
-        conjugatedVerb = verbRoot + "an"
-elif (pronoun == "nosotros") or (pronoun == "nosotras"):
-    if (verbEnding == "er") or (verbEnding == "ir"):
-        conjugatedVerb = verbRoot + "imos"
-    else:
-        conjugatedVerb = verbRoot + "amos"
+if tense == "present":
+    if pronoun == "yo":
+        conjugatedVerb = verbRoot + "o"
+    elif pronoun == "tu":
+        if (verbEnding == "er") or (verbEnding == "ir"):
+            conjugatedVerb = verbRoot + "es"
+        else:
+            conjugatedVerb = verbRoot + "as"
+    elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
+        if (verbEnding == "er") or (verbEnding == "ir"):
+            conjugatedVerb = verbRoot + "e"
+        else:
+            conjugatedVerb = verbRoot + "a"
+    elif (pronoun == "ellas") or (pronoun == "ellos"):
+        if (verbEnding == "er") or (verbEnding == "ir"):
+            conjugatedVerb = verbRoot + "en"
+        else:
+            conjugatedVerb = verbRoot + "an"
+    elif (pronoun == "nosotros") or (pronoun == "nosotras"):
+        if (verbEnding == "er") or (verbEnding == "ir"):
+            conjugatedVerb = verbRoot + "imos"
+        else:   
+            conjugatedVerb = verbRoot + "amos"
 
 if tense == "future":
     if pronoun == "yo":
