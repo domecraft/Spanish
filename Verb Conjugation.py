@@ -28,7 +28,7 @@ elif pronoun == "tu":
         conjugatedVerb = verbRoot + "es"
     else:
         conjugatedVerb = verbRoot + "as"
-elif pronoun == "usted"
+elif pronoun == "usted":
     if (verbEnding == "er") or (verbEnding == "ir"):
         conjugatedVerb = verbRoot + "e"
     else:
