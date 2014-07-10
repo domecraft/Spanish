@@ -11,6 +11,7 @@ inputpCorrect = False
 while inputpCorrect == False:
     print 
     pronoun = raw_input("Enter a pronoun: ")
+    pronoun = pronoun.lower()
     try:
         int(pronoun)
     except:
@@ -20,6 +21,7 @@ inputwCorrect = False
 while inputwCorrect == False:
     print
     verb = raw_input("Enter the infinitive of the verb: ")
+    verb = verb.lower()
     try:
         int(word)
     except:
