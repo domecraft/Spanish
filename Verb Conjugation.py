@@ -1,6 +1,6 @@
 inputtCorrect = False
 while inputtCorrect == False:
-    tense = raw_input("Enter the tense of the verb (present or future):")
+    tense = raw_input("Enter the tense of the verb (past imperfect, present or future): ")
     tense = tense.lower()
     try:
         int(tense)
