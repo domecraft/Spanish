@@ -145,7 +145,7 @@ if tense == "future":
 
     
 
-print ""
+print
 if (tense == "present") or (tense == "past imperfect") or (tense == "past"):
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb + "."
 else: 
