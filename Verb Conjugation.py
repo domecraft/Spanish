@@ -1,5 +1,5 @@
 print "Please note, this program will only work for regular verbs"
-
+print
 inputtCorrect = False
 while inputtCorrect == False:
     tense = raw_input("Enter the tense of the verb (past imperfect, past, present or future): ")
