@@ -1,3 +1,5 @@
+print "Please note, this program will only work for regular verbs"
+
 inputtCorrect = False
 while inputtCorrect == False:
     tense = raw_input("Enter the tense of the verb (past imperfect, present or future): ")
@@ -96,7 +98,7 @@ if tense == "future":
 
     
 
-print
+print ""
 if (tense == "present") or (tense == "past imperfect"):
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb + "."
 else: 
