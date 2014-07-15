@@ -2,7 +2,7 @@ print "Please note, this program will only work for regular verbs"
 print
 inputtCorrect = False
 while inputtCorrect == False:
-    tense = raw_input("Enter the tense of the verb (past imperfect, past, present or future): ")
+    tense = raw_input("Enter the tense of the verb (imperative, past imperfect, past, present or future): ")
     tense = tense.lower()
     try:
         int(tense)
@@ -125,6 +125,18 @@ if tense == "past":
             conjugatedVerb = verbRoot + "asteis"
         else:
             conjugatedVerb = verbRoot + "isteis"
+            
+if (tense == "imperative") or (tense == "command"):
+    if pronoun == "usted":
+        if verbEnding == "ar":
+            conjugatedVerb = verbRoot + "e"
+        else:
+            conjugatedVerb = verbRoot + "a"
+    else:
+        if verbEnding == "ar":
+            conjugatedVerb = verbRoot + "a"
+        else:
+            conjugatedVerb = verbRoot + "e"
         
             
 
@@ -141,12 +153,10 @@ if tense == "future":
         conjugatedIr = "vamos"
     elif (pronoun == "vosotros") or (pronoun == "vosotras"):
         conjugatedIr = "vais"
-    
-
-    
+        
 
 print
-if (tense == "present") or (tense == "past imperfect") or (tense == "past"):
+if (tense == "present") or (tense == "past imperfect") or (tense == "past") or (tense == "imperative") or (tense == "command"):
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb + "."
 else: 
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedIr + " a " + verb +"."
