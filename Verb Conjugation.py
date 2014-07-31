@@ -41,12 +41,12 @@ if tense == "present":
             conjugatedVerb = verbRoot + "es"
         else:
             conjugatedVerb = verbRoot + "as"
-    elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
+    elif (pronoun == "usted") or (pronoun == "ud.") or (pronoun == "ella") or (pronoun == "el"):
         if (verbEnding == "er") or (verbEnding == "ir"):
             conjugatedVerb = verbRoot + "e"
         else:
             conjugatedVerb = verbRoot + "a"
-    elif (pronoun == "ellas") or (pronoun == "ellos") or (pronoun == "ustedes"):
+    elif (pronoun == "ellas") or (pronoun == "ellos") or (pronoun == "ustedes") or (pronoun == "uds."):
         if (verbEnding == "er") or (verbEnding == "ir"):
             conjugatedVerb = verbRoot + "en"
         else:
@@ -73,12 +73,12 @@ if tense == "past imperfect":
             conjugatedVerb = verbRoot + "ías"
         else:
             conjugatedVerb = verbRoot + "abas"
-    elif (pronoun == "usted") or (pronoun == "el") or (pronoun == "ella"):
+    elif (pronoun == "usted") or (pronoun == "ud.") or (pronoun == "el") or (pronoun == "ella"):
         if (verbEnding == "ir") or (verbEnding == "er"):
             conjugatedVerb = verbRoot + "ía"
         else:
             conjugatedVerb = verbRoot + "aba"
-    elif (pronoun == "ellos") or (pronoun == "ellas") or (pronoun == "ustedes"):
+    elif (pronoun == "ellos") or (pronoun == "ellas") or (pronoun == "ustedes") or (pronoun == "uds."):
         if (verbEnding == "ir") or (verbEnding == "er"):
             conjugatedVerb = verbRoot + "ían"
         else:
@@ -105,12 +105,12 @@ if tense == "past":
             conjugatedVerb = verbRoot + "aste"
         else:
             conjuguatedVerb = verbRoot = "iste"
-    elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
+    elif (pronoun == "usted") or  (pronoun == "ud.")or (pronoun == "ella") or (pronoun == "el"):
         if verbEnding == "ar":
             conjugatedVerb = verbRoot + "ó"
         else:
             conjuguatedVerb = verbRoot + "ió"
-    elif (pronoun == "ustedes") or (pronoun == "ellos") or (pronoun == "ellas"):
+    elif (pronoun == "ustedes") or (pronoun == "uds.") or (pronoun == "ellos") or (pronoun == "ellas"):
         if verbEnding == "ar":
             conjugatedVerb = verbRoot + "aron"
         else:
@@ -127,11 +127,16 @@ if tense == "past":
             conjugatedVerb = verbRoot + "isteis"
             
 if (tense == "imperative") or (tense == "command"):
-    if pronoun == "usted":
+    if (pronoun == "usted") or (pronoun == "ud.") or (pronoun == "ud"):
         if verbEnding == "ar":
             conjugatedVerb = verbRoot + "e"
         else:
             conjugatedVerb = verbRoot + "a"
+    elif (pronoun == "ustedes") or (pronoun == "uds.") or (pronoun == "uds"):
+        if verbEnding == "ar":
+            conjugatedVerb = verbRoot + "en"
+        else:
+            conjugatedVerb = verbRoot + "an"
     else:
         if verbEnding == "ar":
             conjugatedVerb = verbRoot + "a"
@@ -145,9 +150,9 @@ if tense == "future":
         conjugatedIr = "voy"
     elif pronoun == "tu":
         conjugatedIr = "vas"
-    elif (pronoun == "usted") or (pronoun == "ella") or (pronoun == "el"):
+    elif (pronoun == "usted") or ("ud.") or (pronoun == "ella") or (pronoun == "el"):
         conjugatedIr = "va"
-    elif (pronoun == "ellos") or (pronoun == "ellas") or (pronoun == "ustedes"):
+    elif (pronoun == "ellos") or (pronoun == "ellas") or (pronoun == "ustedes") or (pronoun == "uds."):
         conjugatedIr = "van"
     elif (pronoun == "nosotros") or (pronoun == "nosotras"):
         conjugatedIr = "vamos"
@@ -156,8 +161,10 @@ if tense == "future":
         
 
 print
-if (tense == "present") or (tense == "past imperfect") or (tense == "past") or (tense == "imperative") or (tense == "command"):
+if (tense == "present") or (tense == "past imperfect") or (tense == "past"):
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedVerb + "."
+elif (tense == "imperative") or (tense == "command"):
+    print "The verb conjugated is: (" + pronoun + ") " + conjugatedVerb + "." 
 else: 
     print "The verb conjugated is: " + pronoun.capitalize() + " " + conjugatedIr + " a " + verb +"."
 
