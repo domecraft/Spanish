@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 print "Please note, this program will only work for regular verbs"
 print
 inputtCorrect = False
